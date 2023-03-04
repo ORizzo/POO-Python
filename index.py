@@ -18,14 +18,16 @@ class User():
             return createdUser
         except Exception as exceptionInstance:
             return exceptionInstance
-
     def update_user(self):
-        updatedUser = updateUser.execute(self.user, {
-            "name": "updated name",
-            "age": 18,
-            "email": 'updated email'
-        })
-        return updatedUser
+        try:
+            updatedUser = updateUser.execute(self.user, {
+                "name": "updated name",
+                "age": 18,
+                "email": 'updated email'
+            })
+            return updatedUser
+        except Exception as exceptionInstance:
+            return exceptionInstance
     def get_user(self):
         try:
             username = self.user['name']
@@ -34,8 +36,11 @@ class User():
         except Exception as exceptionInstance:
             return exceptionInstance
     def delete_user(self):
-        deletedUser = deleteUser.execute(self.user)
-        return deletedUser
+        try:
+            deletedUser = deleteUser.execute(self.user)
+            return deletedUser
+        except Exception as exceptionInstance:
+            return exceptionInstance
 
 # Initiate a new user with User class constructor, with passed params
 user = User("henrique", 18, 'gmail')
