@@ -9,7 +9,7 @@ def execute(user):
         f.close()
         return user
     except:
-        return "The specified file already exists, and cannot be created"
+        raise Exception("The specified file already exists, and cannot be created")
         
     
     

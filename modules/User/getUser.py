@@ -8,7 +8,7 @@ def execute(username: str):
 
         return user
     except:
-        return "The specified file does not exist, and cannot be readed"
+        raise Exception("The specified file does not exist, and cannot be readed")
         
     
     

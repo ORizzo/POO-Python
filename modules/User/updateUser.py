@@ -11,7 +11,7 @@ def execute(user, newUser):
         f.write(json.dumps(newUser))
     else:
         f.close()
-        return "The new user is not valid, check the informations"
+        raise Exception("The new user is not valid, check the informations") 
     f.close()
 
     return user         
