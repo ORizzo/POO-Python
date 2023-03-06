@@ -9,7 +9,7 @@ Para clonar o projeto na sua máquina e começar os estudos, basta utilizar o [g
 **Lembrar de arrumar caso mude o repositório**
 
 ```bash
-git clone https://github.com/ORizzo/python.git
+git clone https://github.com/ORizzo/POO-Python.git
 ```
 ## Contributing
 
