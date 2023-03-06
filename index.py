@@ -1,7 +1,7 @@
-# import modules for modules/User/
+# Import modules for modules/User/
 from modules.User import createUser, updateUser, getUser, deleteUser
 
-#Declare User class (It's a object with methods)
+# Declare User class (It's an object with methods)
 class User():
     # Declare User class constructor (an method that will be called when the User class is initialized)
     def __init__(self, name: str, age: int, email: str) -> None:
@@ -44,6 +44,6 @@ class User():
 
 # Initiate a new user with User class constructor, with passed params
 user = User("henrique", 18, 'gmail')
-print(user.get_user())
+
     
 
