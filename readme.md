@@ -6,8 +6,6 @@ Esse projeto tem a função de ensinar um pouco sobre python, e programação or
 
 Para clonar o projeto na sua máquina e começar os estudos, basta utilizar o [git](https://git-scm.com/downloads) e utilizar o comando abaixo dentro de qualquer linha de comando (cmd, powershell, zsh, bash)
 
-**Lembrar de arrumar caso mude o repositório**
-
 ```bash
 git clone https://github.com/ORizzo/POO-Python.git
 ```
