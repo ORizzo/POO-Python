@@ -5,7 +5,7 @@ from modules.User import createUser, updateUser, getUser, deleteUser
 class User():
     # Declare User class constructor (an method that will be called when the User class is initialized)
     def __init__(self, name: str, age: int, email: str) -> None:
-        self.user = {
+        self.informations = {
             "name": name,
             "age": age,
             "email": email
@@ -14,13 +14,13 @@ class User():
     # Self in class methods refers to the class properties => User -> user -> (name, age, email)/
     def create_user(self):
         try:
-            createdUser = createUser.execute(self.user)
+            createdUser = createUser.execute(self.informations)
             return createdUser
         except Exception as exceptionInstance:
             return exceptionInstance
     def update_user(self):
         try:
-            updatedUser = updateUser.execute(self.user, {
+            updatedUser = updateUser.execute(self.informations, {
                 "name": "updated name",
                 "age": 18,
                 "email": 'updated email'
@@ -30,14 +30,14 @@ class User():
             return exceptionInstance
     def get_user(self):
         try:
-            username = self.user['name']
+            username = self.informations['name']
             user = getUser.execute(username)
             return user
         except Exception as exceptionInstance:
             return exceptionInstance
     def delete_user(self):
         try:
-            deletedUser = deleteUser.execute(self.user)
+            deletedUser = deleteUser.execute(self.informations)
             return deletedUser
         except Exception as exceptionInstance:
             return exceptionInstance
@@ -45,5 +45,17 @@ class User():
 # Initiate a new user with User class constructor, with passed params
 user = User("henrique", 18, 'gmail')
 
-    
+print(user.informations)
 
+print("""
+
+  _____  _                                                    _       _               _                 _         _                         
+ |  __ \(_)     /\                                           (_)     | |             | |               | |       | |                        
+ | |  | |_     /  \   _ __ __ _ _ __   __ _   _ __ ___   __ _ _ ___  | |__  _ __ __ _| |__   ___     __| | __ _  | |_ _ __ ___  _ __   __ _ 
+ | |  | | |   / /\ \ | '__/ _` | '_ \ / _` | | '_ ` _ \ / _` | / __| | '_ \| '__/ _` | '_ \ / _ \   / _` |/ _` | | __| '__/ _ \| '_ \ / _` |
+ | |__| | |  / ____ \| | | (_| | | | | (_| | | | | | | | (_| | \__ \ | |_) | | | (_| | |_) | (_) | | (_| | (_| | | |_| | | (_) | |_) | (_| |
+ |_____/| | /_/    \_\_|  \__,_|_| |_|\__,_| |_| |_| |_|\__,_|_|___/ |_.__/|_|  \__,_|_.__/ \___/   \__,_|\__,_|  \__|_|  \___/| .__/ \__,_|
+       _/ |                                                                                                                    | |          
+      |__/                                                                                                                     |_|                                           
+
+""")
